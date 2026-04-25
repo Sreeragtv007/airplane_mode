@@ -1,8 +1,8 @@
 app_name = "airplane_mode"
 app_title = "Airplane Mode"
 app_publisher = "sreerag"
-app_description = "   "
-app_email = "sreeragtv007@gmail.com"
+app_description = "airplane mode app"
+app_email = "sreeragtv91@gmail.com"
 app_license = "mit"
 
 # Apps
