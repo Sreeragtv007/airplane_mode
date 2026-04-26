@@ -7,13 +7,15 @@
  "field_order": [
   "section_break_enwa",
   "amended_from",
+  "column_break_xuip",
   "passenger",
-  "destination_airport",
+  "departure_date",
   "source_airport",
+  "destination_airport",
+  "flight",
+  "column_break_volm",
   "source_airport_code",
   "destination_airport_code",
-  "flight",
-  "departure_date",
   "departure_time",
   "duration_of_flight",
   "status"
@@ -105,6 +107,14 @@
    "fieldtype": "Select",
    "label": "status",
    "options": "booked\ncheckdin\nboarded"
+  },
+  {
+   "fieldname": "column_break_xuip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_volm",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
@@ -116,7 +126,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2026-04-25 12:59:51.189385",
+ "modified": "2026-04-26 10:27:09.103669",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
