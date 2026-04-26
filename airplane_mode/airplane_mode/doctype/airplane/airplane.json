@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "{airline}-.###",
- "creation": "2026-04-12 19:23:06.922251",
+ "creation": "2026-04-25 11:25:51.928113",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -21,7 +21,6 @@
   {
    "fieldname": "airline",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Airline",
    "options": "Airline",
    "reqd": 1
@@ -30,13 +29,14 @@
    "fieldname": "capacity",
    "fieldtype": "Int",
    "label": "Capacity ",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-12 20:09:20.749748",
+ "modified": "2026-04-25 11:35:44.039971",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",

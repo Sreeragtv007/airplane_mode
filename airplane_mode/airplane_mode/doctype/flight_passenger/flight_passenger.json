@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "autoincrement",
- "creation": "2026-04-12 19:27:56.296128",
+ "creation": "2026-04-25 11:52:29.958509",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -21,14 +21,12 @@
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Last Name",
    "reqd": 1
   },
   {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Date Of Birth",
    "reqd": 1
   }
@@ -36,7 +34,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-12 19:48:34.509913",
+ "modified": "2026-04-25 12:10:13.638715",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flight Passenger",

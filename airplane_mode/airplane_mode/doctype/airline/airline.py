@@ -14,7 +14,7 @@ class Airline(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		customer_care_number: DF.Data
+		customer_care: DF.Data
 		founding_year: DF.Int
 		headquarters: DF.Data
 	# end: auto-generated types

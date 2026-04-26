@@ -1,35 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-04-12 19:49:45.796233",
+ "creation": "2026-04-25 12:13:01.115098",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_enwa",
+  "amended_from",
   "passenger",
-  "source_airport",
   "destination_airport",
+  "source_airport",
   "source_airport_code",
   "destination_airport_code",
   "flight",
   "departure_date",
   "departure_time",
-  "duration_of_flight"
+  "duration_of_flight",
+  "status"
  ],
  "fields": [
+  {
+   "fieldname": "section_break_enwa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
   {
    "fieldname": "passenger",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Passenger ",
    "options": "Flight Passenger",
-   "reqd": 1
-  },
-  {
-   "fieldname": "source_airport",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Source Airport ",
-   "options": "Airport",
    "reqd": 1
   },
   {
@@ -41,21 +50,27 @@
    "reqd": 1
   },
   {
-   "fetch_from": "source_airport.code",
-   "fieldname": "source_airport_code",
+   "fieldname": "source_airport",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Source Airport Code",
+   "label": "Source Airport",
    "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "source_airport.code",
+   "fieldname": "source_airport_code",
+   "fieldtype": "Data",
+   "label": "Source Airport Code",
    "read_only": 1,
    "reqd": 1
   },
   {
    "fetch_from": "destination_airport.code",
    "fieldname": "destination_airport_code",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Destination Airport Code",
-   "options": "Airport",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -68,26 +83,40 @@
   {
    "fieldname": "departure_date",
    "fieldtype": "Date",
-   "label": "Departure Date ",
+   "in_standard_filter": 1,
+   "label": "Departure Date",
    "reqd": 1
   },
   {
    "fieldname": "departure_time",
    "fieldtype": "Time",
-   "label": "Departure Time "
+   "label": "Departure Time",
+   "reqd": 1
   },
   {
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
-   "hide_seconds": 1,
-   "label": "Duration of Flight",
+   "label": "Duration of Flight ",
    "reqd": 1
+  },
+  {
+   "default": "booked",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "booked\ncheckdin\nboarded"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-13 10:24:25.414994",
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Airplane",
+   "link_fieldname": "airline"
+  }
+ ],
+ "modified": "2026-04-25 12:59:51.189385",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
@@ -103,6 +132,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
@@ -110,5 +140,19 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Gray",
+   "title": "booked"
+  },
+  {
+   "color": "Purple",
+   "title": "checkdin"
+  },
+  {
+   "color": "Green",
+   "title": "boarded"
+  }
+ ],
+ "track_changes": 1
 }

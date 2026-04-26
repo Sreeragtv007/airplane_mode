@@ -14,15 +14,17 @@ class AirplaneTicket(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		amended_from: DF.Link | None
 		departure_date: DF.Date
-		departure_time: DF.Time | None
+		departure_time: DF.Time
 		destination_airport: DF.Link
-		destination_airport_code: DF.Link
+		destination_airport_code: DF.Data
 		duration_of_flight: DF.Duration
 		flight: DF.Link
 		passenger: DF.Link
 		source_airport: DF.Link
-		source_airport_code: DF.Link
+		source_airport_code: DF.Data
+		status: DF.Literal["booked", "checkdin", "boarded"]
 	# end: auto-generated types
 
 	pass

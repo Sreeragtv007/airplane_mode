@@ -14,7 +14,7 @@ class Airport(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		city: DF.Data | None
+		city: DF.Data
 		code: DF.Data
 		country: DF.Data
 	# end: auto-generated types

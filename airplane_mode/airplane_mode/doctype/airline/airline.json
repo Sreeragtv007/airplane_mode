@@ -2,12 +2,12 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2026-04-12 19:19:43.879131",
+ "creation": "2026-04-25 11:19:34.372922",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "founding_year",
-  "customer_care_number",
+  "customer_care",
   "headquarters"
  ],
  "fields": [
@@ -18,24 +18,28 @@
    "non_negative": 1
   },
   {
-   "fieldname": "customer_care_number",
+   "fieldname": "customer_care",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Customer Care Number",
+   "label": "Customer Care",
    "reqd": 1
   },
   {
    "fieldname": "headquarters",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Headquarters ",
    "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-12 19:21:16.096651",
+ "links": [
+  {
+   "link_doctype": "Airplane",
+   "link_fieldname": "airline"
+  }
+ ],
+ "modified": "2026-04-25 14:12:05.800229",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
